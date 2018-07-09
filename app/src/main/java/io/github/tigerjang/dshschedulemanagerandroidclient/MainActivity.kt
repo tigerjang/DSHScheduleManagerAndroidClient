@@ -1,5 +1,6 @@
 package io.github.tigerjang.dshschedulemanagerandroidclient
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
@@ -50,7 +51,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         when (item.itemId) {
-            R.id.action_settings -> return true
+            R.id.action_settings -> {
+                startActivity(Intent(this, SettingsActivity::class.java))
+                return true
+            }
             else -> return super.onOptionsItemSelected(item)
         }
     }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="@string/pref_key_safe_update"
+    android:title="@string/pref_title_safe_gesture">
+    <ListPreference
+        android:entries="@array/pref_entries_safe_level"
+        android:entryValues="@array/pref_entryValues_safe_level"
+        android:key="@string/pref_key_safe_level"
+        android:summary="@string/pref_summary_safe_level"
+        android:title="@string/pref_title_safe_level" />
+    <Preference android:title="@string/pref_title_safe_update">
+        <intent android:action="@string/pref_action_safe_update" />
+    </Preference>
+</PreferenceScreen>
